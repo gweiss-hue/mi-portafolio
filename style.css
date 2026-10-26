@@ -1,0 +1,2582 @@
+/* =====================================================
+   ♡ GABRIELA WEISS ♡
+   MY BLUE AESTHETIC PORTFOLIO
+
+   Navy Blue · Baby Blue · Sky Blue · Ice Blue
+
+   Diseño elegante, delicado y moderno
+===================================================== */
+
+
+/* ==============================
+   1. FUENTES Y COLORES
+============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+:root {
+
+    /* AZULES OSCUROS */
+
+    --navy: #091D35;
+    --midnight: #102B4E;
+    --deep-blue: #173B66;
+
+    /* AZULES INTERMEDIOS */
+
+    --ocean: #286DA8;
+    --royal-blue: #397FC1;
+    --blue: #599DD4;
+
+    /* AZULES CLAROS */
+
+    --sky: #91C9EF;
+    --baby: #C5E5FA;
+    --powder: #D9EDFC;
+    --ice: #EDF7FF;
+
+    /* COLORES NEUTROS */
+
+    --white: #FFFFFF;
+    --soft-white: #FAFDFF;
+
+    /* TEXTOS */
+
+    --text: #344F6B;
+    --text-light: #718BA5;
+
+    /* SOMBRAS */
+
+    --shadow-soft:
+        0 10px 30px rgba(25, 75, 125, 0.08);
+
+    --shadow-medium:
+        0 15px 40px rgba(20, 60, 110, 0.13);
+
+    --shadow-strong:
+        0 20px 55px rgba(10, 40, 80, 0.20);
+
+    /* BORDES */
+
+    --radius-small: 15px;
+    --radius-medium: 24px;
+    --radius-large: 35px;
+
+}
+
+
+/* ==============================
+   2. CONFIGURACIÓN GENERAL
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
+}
+
+body {
+
+    font-family: 'DM Sans', sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #FFFFFF 0%,
+            #F3FAFF 50%,
+            #FFFFFF 100%
+        );
+
+    color: var(--text);
+
+    line-height: 1.85;
+
+    overflow-x: hidden;
+
+}
+
+
+/* SELECCIÓN DE TEXTO */
+
+::selection {
+    background: var(--baby);
+    color: var(--navy);
+}
+
+
+/* TÍTULOS */
+
+h1,
+h2,
+h3,
+h4 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--navy);
+
+    line-height: 1.3;
+
+}
+
+
+/* PÁRRAFOS */
+
+p {
+    margin-bottom: 18px;
+}
+
+
+/* ENLACES */
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+/* IMÁGENES */
+
+img {
+    max-width: 100%;
+}
+
+
+/* ==============================
+   3. BARRA DE NAVEGACIÓN
+============================== */
+
+.navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    min-height: 82px;
+
+    padding: 18px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            120deg,
+            #091D35,
+            #173B66
+        );
+
+    border-bottom:
+        1px solid rgba(190, 225, 255, 0.25);
+
+    box-shadow:
+        0 8px 30px rgba(5, 25, 50, 0.18);
+
+}
+
+
+/* LOGO */
+
+.logo {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--baby);
+
+    white-space: nowrap;
+
+}
+
+.logo:hover {
+
+    color: white;
+
+    text-shadow:
+        0 0 15px rgba(180, 225, 255, 0.7);
+
+}
+
+
+/* ENLACES DEL MENÚ */
+
+.navbar nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+.navbar nav a {
+
+    position: relative;
+
+    color: #E7F4FF;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    padding: 8px 0;
+
+}
+
+
+/* LÍNEA ANIMADA DEBAJO */
+
+.navbar nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--sky);
+
+    transition: width 0.3s ease;
+
+}
+
+.navbar nav a:hover {
+
+    color: var(--sky);
+
+}
+
+.navbar nav a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* BOTÓN DE MENÚ */
+
+.menu-toggle {
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+/* ==============================
+   4. PORTADA PRINCIPAL
+============================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 88vh;
+
+    padding: 110px 9%;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 75px;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(160, 215, 250, 0.6),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 10% 85%,
+            rgba(195, 230, 255, 0.6),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #FFFFFF,
+            #E8F5FF,
+            #D9EDFC
+        );
+
+}
+
+
+/* DECORACIÓN CIRCULAR */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+
+    height: 430px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(145, 201, 239, 0.13);
+
+    top: -180px;
+
+    right: -120px;
+
+    pointer-events: none;
+
+}
+
+.hero::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    bottom: 55px;
+
+    right: 9%;
+
+    font-size: 55px;
+
+    color: rgba(40, 109, 168, 0.18);
+
+    pointer-events: none;
+
+}
+
+
+/* TEXTO DE LA PORTADA */
+
+.hero-texto {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* ETIQUETAS */
+
+.etiqueta {
+
+    display: inline-block;
+
+    padding: 9px 20px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.7);
+
+    border:
+        1px solid rgba(91, 155, 210, 0.3);
+
+    color: var(--ocean);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+    box-shadow: var(--shadow-soft);
+
+}
+
+
+/* NOMBRE PRINCIPAL */
+
+.hero h1 {
+
+    font-size: clamp(48px, 6vw, 88px);
+
+    font-weight: 700;
+
+    line-height: 1.12;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+
+}
+
+.hero h1 span {
+
+    display: inline-block;
+
+    color: var(--royal-blue);
+
+    font-style: italic;
+
+    background:
+        linear-gradient(
+            120deg,
+            #1D568C,
+            #599DD4
+        );
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+/* DESCRIPCIÓN */
+
+.subtitulo {
+
+    font-size: 19px;
+
+    max-width: 560px;
+
+    color: #58738E;
+
+    line-height: 1.9;
+
+}
+
+
+/* DATOS PERSONALES */
+
+.datos-hero {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    margin: 35px 0;
+
+}
+
+.datos-hero span {
+
+    padding: 10px 19px;
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    border:
+        1px solid rgba(145, 201, 239, 0.5);
+
+    border-radius: 30px;
+
+    color: var(--midnight);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    box-shadow: var(--shadow-soft);
+
+    transition: 0.3s;
+
+}
+
+.datos-hero span:hover {
+
+    background: var(--baby);
+
+    transform: translateY(-4px);
+
+}
+
+
+/* BOTÓN PRINCIPAL */
+
+.boton {
+
+    display: inline-block;
+
+    padding: 16px 34px;
+
+    border-radius: 40px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #102B4E,
+            #286DA8
+        );
+
+    color: white;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    letter-spacing: 0.4px;
+
+    box-shadow:
+        0 10px 25px rgba(25, 75, 125, 0.25);
+
+    transition: all 0.35s ease;
+
+}
+
+.boton:hover {
+
+    transform: translateY(-5px);
+
+    background:
+        linear-gradient(
+            120deg,
+            #286DA8,
+            #599DD4
+        );
+
+    box-shadow:
+        0 16px 35px rgba(25, 75, 125, 0.3);
+
+}
+
+
+/* ==============================
+   5. FOTO PRINCIPAL
+============================== */
+
+.hero-foto {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+}
+
+
+/* MARCO DE FOTO */
+
+.marco-foto {
+
+    position: relative;
+
+    width: 365px;
+
+    max-width: 100%;
+
+    height: 465px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #91C9EF,
+            #EAF6FF
+        );
+
+    border: 12px solid white;
+
+    border-radius:
+        190px 190px 35px 35px;
+
+    box-shadow:
+
+        23px 23px 0 #B6DDF7,
+
+        0 25px 60px rgba(25, 75, 125, 0.2);
+
+    transition: 0.4s ease;
+
+}
+
+.marco-foto:hover {
+
+    transform: translateY(-8px) rotate(1deg);
+
+}
+
+.marco-foto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* ETIQUETA DE FOTO */
+
+.decoracion-foto {
+
+    position: absolute;
+
+    bottom: 22px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 9px 24px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    backdrop-filter: blur(10px);
+
+    color: var(--navy);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    box-shadow: var(--shadow-soft);
+
+}
+
+
+/* ==============================
+   6. FRASE PERSONAL
+============================== */
+
+.frase {
+
+    position: relative;
+
+    padding: 85px 12%;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #091D35,
+            #173B66,
+            #286DA8
+        );
+
+    overflow: hidden;
+
+}
+
+.frase::before {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 7%;
+
+    color: rgba(255,255,255,0.2);
+
+    font-size: 50px;
+
+}
+
+.frase::after {
+
+    content: "✧";
+
+    position: absolute;
+
+    bottom: 15px;
+
+    right: 8%;
+
+    color: rgba(255,255,255,0.2);
+
+    font-size: 60px;
+
+}
+
+.frase p {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(23px, 3vw, 36px);
+
+    font-style: italic;
+
+    line-height: 1.7;
+
+    color: white;
+
+}
+
+.frase span {
+
+    display: block;
+
+    margin-top: 25px;
+
+    color: var(--baby);
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ==============================
+   7. SECCIONES GENERALES
+============================== */
+
+.seccion {
+
+    position: relative;
+
+    padding: 110px 9%;
+
+}
+
+.fondo-claro {
+
+    background:
+        linear-gradient(
+            135deg,
+            #F0F9FF,
+            #E2F2FF,
+            #F7FCFF
+        );
+
+}
+
+
+/* TÍTULOS DE SECCIONES */
+
+.titulo-seccion {
+
+    max-width: 850px;
+
+    margin: 0 auto 75px;
+
+    text-align: center;
+
+}
+
+.titulo-seccion span {
+
+    display: inline-block;
+
+    color: var(--ocean);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+.titulo-seccion h2 {
+
+    font-size: clamp(34px, 4vw, 54px);
+
+    margin-bottom: 22px;
+
+}
+
+.titulo-seccion p {
+
+    font-size: 16px;
+
+    color: var(--text-light);
+
+}
+
+
+/* ==============================
+   8. CONTENIDO EN DOS COLUMNAS
+============================== */
+
+.contenido-dos-columnas {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.2fr;
+
+    gap: 75px;
+
+    align-items: center;
+
+    margin-bottom: 75px;
+
+}
+
+
+/* TEXTO */
+
+.texto-contenido {
+
+    padding: 10px 0;
+
+}
+
+.texto-contenido h3 {
+
+    font-size: 33px;
+
+    margin-bottom: 28px;
+
+    color: var(--deep-blue);
+
+}
+
+.texto-contenido p {
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    color: var(--text);
+
+    text-align: justify;
+
+}
+
+
+/* ==============================
+   9. FOTOGRAFÍAS DE SECCIONES
+============================== */
+
+.foto-contenedor {
+
+    position: relative;
+
+    min-height: 470px;
+
+    border: 10px solid white;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #A8D8F7,
+            #EAF6FF
+        );
+
+    box-shadow: var(--shadow-medium);
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+
+}
+
+.foto-contenedor:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow-strong);
+
+}
+
+.foto-contenedor img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 470px;
+
+    object-fit: cover;
+
+}
+
+.foto-etiqueta {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 25px;
+
+    padding: 10px 22px;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 30px;
+
+    color: var(--ocean);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+/* ==============================
+   10. TARJETAS DE INFORMACIÓN
+============================== */
+
+.tarjetas-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+
+}
+
+
+/* TARJETAS GLASS */
+
+.tarjeta {
+
+    position: relative;
+
+    padding: 38px 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.95),
+            rgba(225,242,255,0.8)
+        );
+
+    border:
+        1px solid rgba(145,201,239,0.45);
+
+    border-radius: 26px;
+
+    box-shadow: var(--shadow-soft);
+
+    backdrop-filter: blur(12px);
+
+    transition: all 0.35s ease;
+
+    overflow: hidden;
+
+}
+
+
+/* LÍNEA SUPERIOR DECORATIVA */
+
+.tarjeta::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #286DA8,
+            #91C9EF,
+            #C5E5FA
+        );
+
+}
+
+
+/* EFECTO HOVER */
+
+.tarjeta:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: var(--shadow-medium);
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFFFF,
+            #DDF1FF
+        );
+
+}
+
+
+/* ICONOS */
+
+.icono {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #D7EEFF,
+            #F3FAFF
+        );
+
+    font-size: 30px;
+
+    margin-bottom: 23px;
+
+}
+
+
+/* TÍTULOS DE TARJETAS */
+
+.tarjeta h3 {
+
+    font-size: 23px;
+
+    margin-bottom: 17px;
+
+}
+
+.tarjeta p {
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin-bottom: 0;
+
+}
+
+
+/* ==============================
+   11. SECCIÓN DE FAMILIA
+============================== */
+
+.texto-intro {
+
+    max-width: 850px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+}
+
+
+/* CUADRÍCULA */
+
+.personas-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 35px;
+
+}
+
+
+/* TARJETAS DE PERSONAS */
+
+.persona-card {
+
+    background: white;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #DCECF8;
+
+    box-shadow: var(--shadow-medium);
+
+    transition: all 0.4s ease;
+
+}
+
+.persona-card:hover {
+
+    transform: translateY(-9px);
+
+    box-shadow: var(--shadow-strong);
+
+}
+
+
+/* FOTO DE PERSONA */
+
+.persona-foto {
+
+    position: relative;
+
+    height: 310px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #A7D8F7,
+            #D7EEFF,
+            #EFF8FF
+        );
+
+    overflow: hidden;
+
+}
+
+.persona-foto img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+
+}
+
+.persona-card:hover .persona-foto img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* INFORMACIÓN */
+
+.persona-info {
+
+    padding: 38px;
+
+}
+
+.mini-etiqueta {
+
+    display: inline-block;
+
+    color: var(--royal-blue);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+
+}
+
+.persona-info h3 {
+
+    font-size: 30px;
+
+    margin-bottom: 22px;
+
+}
+
+.persona-info p {
+
+    font-size: 14px;
+
+    line-height: 1.95;
+
+}
+
+
+/* ==============================
+   12. BLOQUE DESTACADO
+============================== */
+
+.bloque-destacado {
+
+    margin-top: 75px;
+
+    padding: 40px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFFFFF,
+            #EFF8FF
+        );
+
+    border:
+        1px solid #D5EAF9;
+
+    border-radius: 35px;
+
+    box-shadow: var(--shadow-medium);
+
+}
+
+.bloque-destacado h3 {
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+
+}
+
+.bloque-destacado p {
+
+    font-size: 15px;
+
+}
+
+
+/* FOTO HORIZONTAL */
+
+.foto-horizontal {
+
+    min-height: 330px;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #A8D8F7,
+            #EAF6FF
+        );
+
+}
+
+.foto-horizontal img {
+
+    width: 100%;
+
+    height: 330px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* ==============================
+   13. CUADROS DE REFLEXIÓN
+============================== */
+
+.bloque-reflexion {
+
+    position: relative;
+
+    max-width: 1050px;
+
+    margin: 75px auto 0;
+
+    padding: 65px;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #091D35,
+            #173B66,
+            #286DA8
+        );
+
+    color: white;
+
+    box-shadow: var(--shadow-strong);
+
+    overflow: hidden;
+
+}
+
+
+/* DECORACIÓN */
+
+.bloque-reflexion::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    right: 35px;
+
+    top: 20px;
+
+    font-size: 80px;
+
+    color: rgba(255,255,255,0.07);
+
+    pointer-events: none;
+
+}
+
+.bloque-reflexion span {
+
+    color: var(--sky);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+.bloque-reflexion h3 {
+
+    color: white;
+
+    font-size: 35px;
+
+    margin: 22px 0 30px;
+
+}
+
+.bloque-reflexion p {
+
+    color: #E4F2FF;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+}
+
+
+/* ==============================
+   14. TARJETAS DE MATERIAS
+============================== */
+
+.materias-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+
+}
+
+
+/* TARJETA DE MATERIA */
+
+.materia-card {
+
+    position: relative;
+
+    padding: 42px 35px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFFFF,
+            #EAF6FF
+        );
+
+    border:
+        1px solid #D7EBFA;
+
+    box-shadow: var(--shadow-soft);
+
+    transition: all 0.4s ease;
+
+    overflow: hidden;
+
+}
+
+
+/* DETALLE DECORATIVO */
+
+.materia-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -45px;
+
+    right: -45px;
+
+    width: 140px;
+
+    height: 140px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(145, 201, 239, 0.2);
+
+    transition: 0.4s;
+
+}
+
+.materia-card:hover::before {
+
+    transform: scale(1.5);
+
+}
+
+
+/* ICONO */
+
+.materia-icono {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 72px;
+
+    height: 72px;
+
+    border-radius: 23px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #D7EEFF,
+            #FFFFFF
+        );
+
+    font-size: 35px;
+
+    margin-bottom: 25px;
+
+    box-shadow: var(--shadow-soft);
+
+}
+
+
+/* TÍTULO */
+
+.materia-card h3 {
+
+    font-size: 26px;
+
+    margin-bottom: 15px;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+.materia-card p {
+
+    color: #6B85A0;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* ENLACE */
+
+.materia-link {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: var(--ocean);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+/* EFECTO HOVER */
+
+.materia-card:hover {
+
+    transform: translateY(-10px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #102B4E,
+            #286DA8
+        );
+
+    box-shadow: var(--shadow-strong);
+
+}
+
+.materia-card:hover h3,
+.materia-card:hover p,
+.materia-card:hover .materia-link {
+
+    color: white;
+
+}
+
+
+/* ==============================
+   15. PÁGINAS DE MATERIAS
+============================== */
+
+.pagina-materia {
+
+    min-height: 75vh;
+
+    padding: 100px 9%;
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(145,201,239,0.35),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #EAF6FF,
+            #F8FCFF,
+            #E3F2FF
+        );
+
+}
+
+
+/* ENCABEZADO */
+
+.encabezado-materia {
+
+    max-width: 850px;
+
+    margin: 0 auto 75px;
+
+    text-align: center;
+
+}
+
+.encabezado-materia h1 {
+
+    font-size: clamp(42px, 6vw, 70px);
+
+    margin: 20px 0 25px;
+
+}
+
+.encabezado-materia p {
+
+    font-size: 18px;
+
+    color: #6B85A0;
+
+    line-height: 1.9;
+
+}
+
+
+/* VOLVER */
+
+.volver {
+
+    display: inline-block;
+
+    margin-bottom: 40px;
+
+    color: var(--ocean);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+.volver:hover {
+
+    color: var(--navy);
+
+    transform: translateX(-5px);
+
+}
+
+
+/* ==============================
+   16. ENTRADAS DE ACTIVIDADES
+============================== */
+
+.entrada {
+
+    position: relative;
+
+    max-width: 1050px;
+
+    margin: 0 auto 45px;
+
+    padding: 55px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,0.96);
+
+    border:
+        1px solid rgba(145,201,239,0.35);
+
+    box-shadow: var(--shadow-medium);
+
+    overflow: hidden;
+
+}
+
+
+/* LÍNEA SUPERIOR */
+
+.entrada::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 6px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #173B66,
+            #599DD4,
+            #C5E5FA
+        );
+
+}
+
+
+/* TÍTULOS */
+
+.entrada h2 {
+
+    font-size: 35px;
+
+    margin-bottom: 30px;
+
+    color: var(--navy);
+
+}
+
+.entrada h3 {
+
+    font-size: 25px;
+
+    margin: 35px 0 20px;
+
+    color: var(--deep-blue);
+
+}
+
+
+/* PÁRRAFOS */
+
+.entrada p {
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    color: var(--text);
+
+}
+
+
+/* LISTAS */
+
+.entrada ul,
+.entrada ol {
+
+    margin: 25px 0;
+
+    padding-left: 30px;
+
+}
+
+.entrada li {
+
+    margin-bottom: 13px;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+}
+
+.entrada li::marker {
+
+    color: var(--ocean);
+
+}
+
+
+/* IMÁGENES DE ACTIVIDADES */
+
+.entrada img {
+
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 35px auto;
+
+    border-radius: 20px;
+
+    border: 5px solid #F0F8FF;
+
+    box-shadow: var(--shadow-medium);
+
+}
+
+
+/* ==============================
+   17. CUADROS DE EJEMPLOS
+============================== */
+
+.ejemplo {
+
+    position: relative;
+
+    margin: 30px 0;
+
+    padding: 32px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F0F9FF,
+            #E0F1FF
+        );
+
+    border:
+        1px solid #C5E5FA;
+
+    border-left:
+        5px solid var(--royal-blue);
+
+    box-shadow: var(--shadow-soft);
+
+    transition: 0.3s ease;
+
+}
+
+.ejemplo:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-medium);
+
+}
+
+.ejemplo h3 {
+
+    font-size: 22px;
+
+    margin: 0 0 18px;
+
+}
+
+.ejemplo p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* ==============================
+   18. CUADROS DE FÓRMULAS
+============================== */
+
+.formula {
+
+    margin: 30px 0;
+
+    padding: 28px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #102B4E,
+            #286DA8
+        );
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 12px 30px rgba(20, 60, 110, 0.2);
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* ==============================
+   19. VIDEOS
+============================== */
+
+.video-contenedor {
+
+    margin: 35px 0;
+
+    padding: 14px;
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #091D35,
+            #286DA8
+        );
+
+    box-shadow: var(--shadow-strong);
+
+}
+
+.video-contenedor video {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 650px;
+
+    border-radius: 16px;
+
+    background: black;
+
+}
+
+
+/* ==============================
+   20. PIE DE PÁGINA
+============================== */
+
+.footer {
+
+    position: relative;
+
+    padding: 75px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #091D35,
+            #173B66
+        );
+
+    color: #D8EBFA;
+
+}
+
+.footer::before {
+
+    content: "✦ ♡ ✦";
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: var(--sky);
+
+    letter-spacing: 15px;
+
+    font-size: 18px;
+
+}
+
+.footer h3 {
+
+    font-size: 30px;
+
+    color: white;
+
+    margin-bottom: 20px;
+
+}
+
+.footer p {
+
+    font-size: 14px;
+
+    color: #D8EBFA;
+
+}
+
+.footer span {
+
+    display: block;
+
+    margin-top: 30px;
+
+    color: var(--sky);
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ==============================
+   21. ANIMACIONES
+============================== */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ANIMACIÓN DE PORTADA */
+
+.hero-texto {
+
+    animation:
+        aparecer 0.9s ease both;
+
+}
+
+.hero-foto {
+
+    animation:
+        aparecer 1.2s ease both;
+
+}
+
+
+/* ANIMACIONES CON JAVASCRIPT */
+
+.revelar {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+
+}
+
+.revelar.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* ==============================
+   22. BARRA DE DESPLAZAMIENTO
+============================== */
+
+::-webkit-scrollbar {
+
+    width: 11px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #EAF6FF;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        linear-gradient(
+            180deg,
+            #91C9EF,
+            #286DA8
+        );
+
+    border-radius: 20px;
+
+    border: 2px solid #EAF6FF;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--navy);
+
+}
+
+
+/* ==============================
+   23. TABLETS
+============================== */
+
+@media (max-width: 1100px) {
+
+    .hero {
+
+        gap: 45px;
+
+        padding: 90px 7%;
+
+    }
+
+    .tarjetas-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+    .materias-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+    .contenido-dos-columnas {
+
+        gap: 40px;
+
+    }
+
+    .navbar nav {
+
+        gap: 17px;
+
+    }
+
+    .navbar nav a {
+
+        font-size: 12px;
+
+    }
+
+}
+
+
+/* ==============================
+   24. CELULARES
+============================== */
+
+@media (max-width: 768px) {
+
+    /* MENÚ */
+
+    .navbar {
+
+        padding: 18px 6%;
+
+    }
+
+    .logo {
+
+        font-size: 20px;
+
+    }
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+    .navbar nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 28px;
+
+        background: var(--navy);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+
+        box-shadow: var(--shadow-medium);
+
+    }
+
+    .navbar nav.activo {
+
+        display: flex;
+
+    }
+
+    .navbar nav a {
+
+        font-size: 14px;
+
+    }
+
+
+    /* PORTADA */
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 75px 7%;
+
+        gap: 55px;
+
+    }
+
+    .hero-texto {
+
+        order: 2;
+
+    }
+
+    .hero-foto {
+
+        order: 1;
+
+    }
+
+    .hero h1 {
+
+        font-size: 51px;
+
+    }
+
+    .subtitulo {
+
+        font-size: 16px;
+
+    }
+
+    .datos-hero {
+
+        justify-content: center;
+
+    }
+
+
+    /* FOTO PRINCIPAL */
+
+    .marco-foto {
+
+        width: 280px;
+
+        height: 360px;
+
+        box-shadow:
+            13px 13px 0 #B6DDF7,
+            var(--shadow-medium);
+
+    }
+
+
+    /* SECCIONES */
+
+    .seccion {
+
+        padding: 75px 6%;
+
+    }
+
+    .titulo-seccion {
+
+        margin-bottom: 50px;
+
+    }
+
+    .titulo-seccion h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    /* COLUMNAS */
+
+    .contenido-dos-columnas {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    /* TARJETAS */
+
+    .tarjetas-grid,
+    .personas-grid,
+    .materias-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* FOTOS */
+
+    .foto-contenedor {
+
+        min-height: 360px;
+
+    }
+
+    .foto-contenedor img {
+
+        height: 360px;
+
+    }
+
+    .persona-foto {
+
+        height: 270px;
+
+    }
+
+
+    /* BLOQUES */
+
+    .bloque-destacado {
+
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+
+    }
+
+    .bloque-reflexion {
+
+        padding: 35px 28px;
+
+    }
+
+    .bloque-reflexion h3 {
+
+        font-size: 27px;
+
+    }
+
+
+    /* MATERIAS */
+
+    .pagina-materia {
+
+        padding: 70px 5%;
+
+    }
+
+    .encabezado-materia h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    /* ENTRADAS */
+
+    .entrada {
+
+        padding: 30px 24px;
+
+    }
+
+    .entrada h2 {
+
+        font-size: 28px;
+
+    }
+
+    .entrada h3 {
+
+        font-size: 22px;
+
+    }
+
+
+    /* FÓRMULAS */
+
+    .formula {
+
+        font-size: 19px;
+
+        padding: 22px;
+
+    }
+
+
+    /* FRASE */
+
+    .frase {
+
+        padding: 65px 8%;
+
+    }
+
+    .frase p {
+
+        font-size: 25px;
+
+    }
+
+}
+
+
+/* ==============================
+   25. CELULARES PEQUEÑOS
+============================== */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+
+        font-size: 43px;
+
+    }
+
+    .marco-foto {
+
+        width: 245px;
+
+        height: 325px;
+
+    }
+
+    .persona-info {
+
+        padding: 27px;
+
+    }
+
+    .materia-card {
+
+        padding: 30px;
+
+    }
+
+    .tarjeta {
+
+        padding: 30px 23px;
+
+    }
+
+}
+
+
+/* ==============================
+   26. ACCESIBILIDAD
+============================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+    .hero-texto,
+    .hero-foto {
+
+        animation: none;
+
+    }
+
+    .revelar {
+
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+
+    }
+
+}
+
+
+
+
+
+/* PRUEBA PARA MATEMÁTICAS */
+
+.math-hero {
+    background: #102B4E !important;
+    padding: 100px 9% !important;
+    border-radius: 0 !important;
+}
+
+.math-hero h1 {
+    color: white !important;
+    font-size: 65px !important;
+}
+
+.math-hero p {
+    color: #D9EDFC !important;
+}
+
+.math-section {
+    background: #EAF6FF !important;
+    padding: 80px 9% !important;
+}
+
+.math-section-title h2 {
+    font-size: 40px !important;
+}
+
+.sequence-items {
+    display: flex !important;
+    justify-content: space-around !important;
+    gap: 15px !important;
+}
+
+.sequence-items > div {
+    background: white !important;
+    padding: 20px !important;
+    border-radius: 15px !important;
+    border: 2px solid #91C9EF !important;
+}
